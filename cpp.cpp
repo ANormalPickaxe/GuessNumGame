@@ -8,14 +8,15 @@ int main(){
     system("pause");
     system("cls");
     srand(time(0));
-    int n=rand()%100+1,g=0;
+    int n=rand()%100+1,g=0,s=0;
     cout<<"我现在想一个1~100的数字,你猜一猜他是几,我告诉你他大了还是小了\n";
     while(g!=n){
+        s++;
         cout<<"猜:";
         cin>>g;
         if(g!=n)cout<<(g>n?"大了\n":"小了\n");
         else{
-            cout<<"正好\n";
+            cout<<"正好，猜了"<<s<<"次";
             break;
         }
     }
